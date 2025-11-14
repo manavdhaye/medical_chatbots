@@ -5,8 +5,10 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from src.helper import download_embeding
 from langchain_pinecone import PineconeVectorStore
-from src.prompt import *
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+from src.prompt import system_prompt
 import os
+from pinecone import Pinecone
 from flask import Flask, render_template, jsonify, request
 
 load_dotenv()
@@ -22,6 +24,7 @@ docsearch=PineconeVectorStore.from_existing_index(
     index_name=index_name,
     embedding=embedding
 )
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
 retiver=docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
