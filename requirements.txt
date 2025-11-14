@@ -12,7 +12,7 @@ python-dotenv==1.0.1
 sentence-transformers==2.2.2
 transformers==4.36.2
 huggingface-hub==0.20.0
-tokenizers==0.14.1
+tokenizers==0.15.0
 numpy==1.26.4
 
 torch==2.2.0+cpu --extra-index-url https://download.pytorch.org/whl/cpu
