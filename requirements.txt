@@ -3,7 +3,7 @@ gunicorn==21.2.0
 
 langchain==0.3.26
 langchain-community==0.3.26
-langchain-pinecone==0.2.2
+langchain-pinecone==0.2.3
 langchain-google-genai==2.0.4
 
 pinecone==4.0.0
