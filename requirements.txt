@@ -1,9 +1,18 @@
-langchain
-langchain-community
-flask
-sentence-transformers
-pypdf
-python-dotenv
-langchain-pinecone
-langchain-google-genai
--e .
+flask==3.1.1
+gunicorn==21.2.0
+
+langchain==0.3.26
+langchain-community==0.3.26
+langchain-pinecone==0.2.2
+langchain-google-genai==2.0.4
+
+pinecone==4.0.0
+python-dotenv==1.0.1
+
+sentence-transformers==2.2.2
+transformers==4.36.2
+huggingface-hub==0.20.0
+tokenizers==0.15.0
+numpy==1.26.4
+
+torch==2.2.0+cpu --extra-index-url https://download.pytorch.org/whl/cpu
